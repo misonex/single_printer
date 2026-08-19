@@ -1,14 +1,14 @@
 # SinglePrinter Package - Compatibil Windows 10/11
-Instalează imprimante din rețea pe o stație de lucru locală cu sistem de operare Windows 10/11.
+Instalează imprimante din rețea pe o stație de lucru locală cu sistem de operare Windows 10/11 fără ca acestea să fie instalate fizic. Scriptul este folositor mai ales în cazul în care avem de instalat mai multe imprimante și acestea încă nu au fost încă instalate fizic, dar știm dinainte ce IP-uri vor fi alocate și mai ales dacă respectivele imprimante vor fi instalate pe un număr considerabil de stații de lucru.
 
 ![Sigle Printer](https://github.com/misonex/single_printer/blob/main/single_printer.png?raw=true)
 
 La rularea scriptului, acesta crează un fișier **log.txt** pentru fiecare sesiune de instalare și un fișier **installed_printers.csv** în care se vor găsi toate imprimantele instalate.
-Dacă serverul nu este accesibil, vor fi create local.
+Dacă serverul nu este accesibil, fișierele vor fi create local.
 
 ## Conținut
 - **Run.bat** - Lansează scriptul PowerShell cu permisiuni corecte (*Batch*)
-- **single_printer.ps1** - Script instalare iimprimante (*PowerShell*)
+- **single_printer.ps1** - Script instalare imprimante (*PowerShell*)
 - **README.txt** - Acest fișier
 - **single_printer.png** - Screenshot execuție script
 - Diverse directoare pentru drivere pentru imprimante.
@@ -20,7 +20,7 @@ Dacă serverul nu este accesibil, vor fi create local.
   - Lexmark_MX410
 
 ## Pregătire
-1. Setează calea pentru loguri către un server local în fișierul **single_printer.ps1**  (*linia 21*). Aceasta trebuie să fie accesibilă, cu drepturi de scriere.
+1. Setează calea pentru loguri către un server local în fișierul **single_printer.ps1**  (*linia 21*). Aceasta trebuie să fie accesibilă, cu drepturi de scriere. [*opțional*]
 2. Copiază driverele necesare în directoare specifice. Driverele sunt despachetate, nu sub forma fișierelor `setup.exe`.
 3. Pentru a adăuga noi drivere se crează un director cu numele imprimantei în rădăcină. Se adaugă intrarea pentru meniu de genul:
   ```
